@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edrsite</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= favicon_link_tag() %>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+
+    <%= stylesheet_link_tag("https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css")%>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag("https://code.jquery.com/jquery-3.3.1.min.js","integrity"=>"sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=","crossorigin"=>"anonymous") %>
+    <%= javascript_include_tag("https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js") %>
+
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  </head>
+
+  <body>
+    <%= render 'layouts/header'%>
+
+      <div class="container">
+          <%=render 'layouts/alerts'%>
+          <%= yield %>
+      </div>
+
+    <footer>
+
+    </footer>
+
+  </body>
+
+</html>

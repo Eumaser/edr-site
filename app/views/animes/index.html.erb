@@ -1,0 +1,55 @@
+<h1>Animes#index</h1>
+<p>Find me in app/views/animes/index.html.erb</p>
+
+<div class="card">
+  <div class="card-header bg-dark text-white">
+    Search
+  </div>
+  <div class="card-body">
+      Insert search forms here
+  </div>
+</div>
+
+<br>
+
+
+<div class="card">
+  <div class="card-header bg-dark text-white">
+    Listing
+  </div>
+  <div class="card-body">
+    <p  class="text-right">
+      <%= link_to("Add",new_anime_path, :class=>"btn btn-primary")%>
+    </p>
+      <table class="table table-bordered">
+        <thead>
+          <th>Name</th>
+          <th>Location</th>
+          <th>Actions</th>
+        </thead>
+        <tbody>
+          <% @anime.each do |anime|%>
+          <tr>
+            <td><%= anime.name%></td>
+            <td><%= anime.location%></td>
+            <td>
+              <%= link_to('View',anime_path(anime.id))%>
+              <%= link_to('Update',edit_anime_path(anime.id))%>
+              <%= link_to("Delete", anime_path(anime.id),
+                          method: :delete,
+                          data: {confirm: 'Are you sure'}
+              )%>
+            </td>
+          </tr>
+          <%end%>
+        </tbody>
+
+
+      </table>
+      <div class="pagination">
+        <%= will_paginate @anime, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+
+      </div>
+
+  </div>
+</div>
