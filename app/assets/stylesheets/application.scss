@@ -17,6 +17,7 @@
 /*@import "bulma";*/
 
 @import url("https://fonts.googleapis.com/css?family=Oswald");
+@import 'imports';
 
 $main_font: 'Oswald', sans-serif;
 $primary-color: #abc555;
@@ -24,15 +25,7 @@ $sectionpads: 8em;
 $mobilescreen: 600px;
 
 
-@mixin grayit($v){
-  -webkit-filter: grayscale($v);
-  -moz-filter: grayscale($v);
-  filter: grayscale($v);
-}
 
-@mixin sectionpads($v){
-  padding: $v
-}
 
 body{
   font-family: $main_font;
@@ -44,15 +37,28 @@ div{
   margin-bottom: 5px;
 }
 
-section{
-  @include sectionpads($sectionpads);
+
+footer{
+  padding: 10px;
+  background-color: #343a40;
+}
+
+#secondary-link{
+  list-style: none;
+  padding: 0px;
+  margin: 10px;
+
+  & li{
+    display: inline-block
+  }
 }
 
 
 
 /*small mobiel screen*/
 @media only screen and (max-width: $mobilescreen) {
-  section{
-    @include sectionpads(1em);
+  .introduction{
+    @include paddings(1em);
   }
+
 }

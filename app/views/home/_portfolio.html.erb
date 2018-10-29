@@ -1,0 +1,79 @@
+<div class="card">
+  <div class="card-header">
+    <h2>Portfolio</h2>
+  </div>
+  <div class="card-body">
+
+      <div class="row">
+        <div class="col-md-4">
+          <%= link_to(image_tag("techelm.jpg", class: "img-fluid rounded grayscales"), "/assets/techelm.jpg") %>
+
+        </div>
+        <div class="col-md-8">
+          <h3>Techelm Project</h3>
+          <p>
+            One of the projects that I worked as a web developer from my previous company. It was created using the Yii2 advance.
+             I coordinated with a mobile team where I created the used for its mobile application.
+            API that I created are mostly retrieving list of records, update content and delete records. As a backend application there is no means to
+            check this web app for yourself.
+          </p>
+        </div>
+      </div>
+
+      <hr>
+      <div class="row">
+        <div class="col-md-4">
+          <%= link_to(image_tag("basic.jpg", class: "img-fluid rounded grayscales"), "/assets/basic.jpg") %>
+
+        </div>
+        <div class="col-md-8">
+          <h3>Archives Project</h3>
+          <p>
+            A personal project that I created for collecting all the animes that I have watch. It was created using Yii2 basic. EDR-Archives can save, update or
+            delete any saved data from the database. No Authentication though.
+            A new ruby on rails version of this is  available on this site, though shorter.
+
+          </p>
+          <%= link_to("Link to github", "https://github.com/Eumaser/EDR-Archives") %>
+          <%= link_to("Link to sample", "https://edrdemo.000webhostapp.com/EDR-Archives/web/index.php") %>
+
+        </div>
+      </div>
+
+      <hr>
+      <div class="row">
+        <div class="col-md-4">
+          <%= link_to(image_tag("jack.jpg", class: "img-fluid rounded grayscales"), "/assets/jack.jpg") %>
+
+        </div>
+        <div class="col-md-8">
+          <h3>JackFocus Project</h3>
+          <p>
+            A CMS project created using wordpress. I was tasked with adding a search functionality where users can filter records based on the filter input from the backend CRM. Since the backend CRM cannot be accessed by guest users,
+            this was created to allow guest to search anad inquire to the admin.
+          </p>
+          <%= link_to("Link to App", "http://jackfocus.com.sg/maids/")%>
+        </div>
+      </div>
+
+      <hr>
+      <div class="row">
+        <div class="col-md-4">
+          <%= link_to(image_tag("railsproj.png", class: "img-fluid rounded grayscales"), "/assets/railsproj.jpg") %>
+
+        </div>
+        <div class="col-md-8">
+          <h2>New Archives</h2>
+          <p>
+            One of my pet projects that I started to get a good underastanding of Ruby on Rails. It also a means to help me land a job as a rails developer
+            but this web application only containt basic skill application that I learned from reading tutorials online.There are other things that I applied
+            here, such as using SASS for designing this particular page and poking on ruby gems such as the will-paginate.
+            I also run into trouble, particularly with bootstrap gem that gives an error. So rather than fixing it, I opted to use the CDNs for it.
+
+          </p>
+        </div>
+      </div>
+
+
+  </div>
+</div>

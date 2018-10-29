@@ -1,3 +1,32 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'imports';
+
+@mixin grayit($v){
+  -webkit-filter: grayscale($v);
+  -moz-filter: grayscale($v);
+  filter: grayscale($v);
+
+  &:hover{
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    filter: grayscale(0%);
+    border: 1px solid white;
+  }
+}
+
+.introduction{
+  @include paddings(4em);
+}
+
+.grayscales{
+  @include grayit(100%);
+}
+
+.skills{
+  @include grayit(50%);
+  img{
+    height: 100px;
+  }
+}
