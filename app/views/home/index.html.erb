@@ -1,20 +1,201 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
-<p>
-  lorem ipsum dolor
-</p>
-<br>
 
-<%= link_to "Log out", destroy_user_session_path, method: :delete %>
-<div class="jumbotron">
-  <h1 class="display-4">Hello, world!</h1>
-  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-  <hr class="my-4">
-  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-  <p class="lead">
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-  </p>
+<div class="card">
+  <div class="card-header">
+    <h2>Portfolio</h2>
+  </div>
+  <div class="card-body">
+
+      <div class="row">
+        <div class="col-md-4">
+          <%= link_to(image_tag("techelm.jpg", class: "img-fluid rounded grayscales"), "/assets/techelm.jpg") %>
+
+        </div>
+        <div class="col-md-8">
+          <h3>Techelm Project</h3>
+          <p>
+            One of the projects that I worked as a web developer from my previous company. It was created using the Yii2 advance.
+             I coordinated with a mobile team where I created the used for its mobile application.
+            API that I created are mostly retrieving list of records, update content and delete records. As a backend application there is no means to
+            check this web app for yourself.
+          </p>
+        </div>
+      </div>
+
+      <hr>
+      <div class="row">
+        <div class="col-md-4">
+          <%= link_to(image_tag("basic.jpg", class: "img-fluid rounded grayscales"), "/assets/basic.jpg") %>
+
+        </div>
+        <div class="col-md-8">
+          <h3>Archives Project</h3>
+          <p>
+            A personal project that I created for collecting all the animes that I have watch. It was created using Yii2 basic. EDR-Archives can save, update or
+            delete any saved data from the database. No Authentication though.
+            A new ruby on rails version of this is  available on this site, though shorter.
+
+          </p>
+          <%= link_to("Link to github", "https://github.com/Eumaser/EDR-Archives") %>
+          <%= link_to("Link to sample", "https://edrdemo.000webhostapp.com/EDR-Archives/web/index.php") %>
+
+        </div>
+      </div>
+
+      <hr>
+      <div class="row">
+        <div class="col-md-4">
+          <%= link_to(image_tag("jack.jpg", class: "img-fluid rounded grayscales"), "/assets/jack.jpg") %>
+
+        </div>
+        <div class="col-md-8">
+          <h3>JackFocus Project</h3>
+          <p>
+            A CMS project created using wordpress. I was tasked with adding a search functionality where users can filter records based on the filter input from the backend CRM. Since the backend CRM cannot be accessed by guest users,
+            this was created to allow guest to search anad inquire to the admin.
+          </p>
+          <%= link_to("Link to App", "http://jackfocus.com.sg/maids/")%>
+        </div>
+      </div>
+
+      <hr>
+      <div class="row">
+        <div class="col-md-4">
+          <%= link_to(image_tag("railsproj.png", class: "img-fluid rounded grayscales"), "/assets/railsproj.jpg") %>
+
+        </div>
+        <div class="col-md-8">
+          <h2>New Archives</h2>
+          <p>
+            One of my pet projects that I started to get a good underastanding of Ruby on Rails. It also a means to help me land a job as a rails developer
+            but this web application only containt basic skill application that I learned from reading tutorials online.There are other things that I applied
+            here, such as using SASS for designing this particular page and poking on ruby gems such as the will-paginate.
+            I also run into trouble, particularly with bootstrap gem that gives an error. So rather than fixing it, I opted to use the CDNs for it.
+
+          </p>
+        </div>
+      </div>
+
+
+  </div>
 </div>
+
+<h1 class="text-center">About EDR</h1>
+
+<div class="row">
+  <div class="col-md-4">
+    <%= image_tag("profile.jpg", class:"img-fluid rounded grayscales")%>
+  </div>
+  <div class="col-md-8">
+    <p>
+      Eumer Joseph Ramos started as a software application developer and worked for 5 years before leaving the industry.
+      Later on, he started learning web development due to opportunity it gives in the industry and focused more on backend development with little experience on website designing.
+      Currently, he is seeking employment to further increase his knowledge and skills as a web developer.
+    </p>
+    <p>
+      He has taken an interest in learning other programming language. He is studying ruby and ruby on rails as a means to learn more
+      and be versatile in web development. As a result, this web application is the application of his knowledge regarding ruby on rails.
+      Another thing is learning is other php frameworks such as laravel and hanami.
+    </p>
+    <p>
+      Besides web development, Eumer prefers sleeping and playing video games as a hobby and to relieve his boredom and stress. He also prefer coffee over tea.
+    </p>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12 col-md-12">
+
+    <div class="card">
+        <div class="card-header">
+          <h2>HTML</h2>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-2 text-center">
+              <%= image_tag("html5.png", class: "img-fluid")%>
+              <h6>HTML5</h6>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    <div class="card">
+        <div class="card-header">
+          <h2>CSS</h2>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-2 text-center">
+              <%= image_tag("html5.png", class: "img-fluid")%>
+              <h6>HTML5</h6>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+          <h2>Javascript</h2>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-2 text-center">
+              <%= image_tag("html5.png", class: "img-fluid")%>
+              <h6>HTML5</h6>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+          <h2>Back-End</h2>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-2 text-center">
+              <%= image_tag("html5.png", class: "img-fluid")%>
+              <h6>HTML5</h6>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+          <h2>CMS</h2>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-2 text-center">
+              <%= image_tag("html5.png", class: "img-fluid")%>
+              <h6>HTML5</h6>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+          <h2>Others</h2>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-2 text-center">
+              <%= image_tag("html5.png", class: "img-fluid")%>
+              <h6>HTML5</h6>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+  </div>
+</div>
+
+
 
 <div class="jumbotron jumbotron-fluid">
   <div class="container">

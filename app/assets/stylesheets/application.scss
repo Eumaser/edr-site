@@ -15,3 +15,44 @@
  */
 
 /*@import "bulma";*/
+
+@import url("https://fonts.googleapis.com/css?family=Oswald");
+
+$main_font: 'Oswald', sans-serif;
+$primary-color: #abc555;
+$sectionpads: 8em;
+$mobilescreen: 600px;
+
+
+@mixin grayit($v){
+  -webkit-filter: grayscale($v);
+  -moz-filter: grayscale($v);
+  filter: grayscale($v);
+}
+
+@mixin sectionpads($v){
+  padding: $v
+}
+
+body{
+  font-family: $main_font;
+  background-image: url("mainbg.jpg");
+}
+
+div{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+section{
+  @include sectionpads($sectionpads);
+}
+
+
+
+/*small mobiel screen*/
+@media only screen and (max-width: $mobilescreen) {
+  section{
+    @include sectionpads(1em);
+  }
+}
