@@ -30,6 +30,8 @@ $mobilescreen: 600px;
 body{
   font-family: $main_font;
   background-image: url("mainbg.jpg");
+  height: 100%;
+
 }
 
 div{
@@ -41,6 +43,11 @@ div{
 footer{
   padding: 10px;
   background-color: #343a40;
+  position: static;
+  width: 100%;
+  bottom: 0;
+
+
 }
 
 #secondary-link{
