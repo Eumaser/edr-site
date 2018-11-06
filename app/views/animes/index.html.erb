@@ -6,7 +6,18 @@
     Search
   </div>
   <div class="card-body">
-      Insert search forms here
+
+      <%= form_tag(animes_path, method: :get) do %>
+      <div class="row">
+        <div class="col-md-3">
+          <%= select_tag(:ids, options_from_collection_for_select(@anime_list, "id", "name",params[:ids]), class:"form-control", prompt:"Name" )%>
+        </div>
+        <div class="col-md-3">
+          <%= select_tag(:location, options_for_select(Anime::LOCATIONS,params[:location]), class:"form-control", prompt:"Drive Location" )%>
+        </div>
+      </div>
+       <%= submit_tag('Search', name: nil, class:"btn btn-success")  %>
+      <% end %>
   </div>
 </div>
 
@@ -37,7 +48,7 @@
               <%= link_to('Update',edit_anime_path(anime.id))%>
               <%= link_to("Delete", anime_path(anime.id),
                           method: :delete,
-                          data: {confirm: 'Are you sure'}
+                          data: {confirm: 'Are you sure?'}
               )%>
             </td>
           </tr>
