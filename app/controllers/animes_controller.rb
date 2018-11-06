@@ -1,7 +1,17 @@
 class AnimesController < ApplicationController
+  layout "others"
+  before_action :authenticate_user!, except: [:index, :show]
+
+
   def index
     #@anime = Anime.all()
-    @anime = Anime.all.order(:name).paginate(:page => params[:page], :per_page => 10)
+    # render plain: params[:article].inspect
+    #render plain: params.inspect
+    @anime_list = Anime.all
+    @anime = Anime.inquire(params).paginate(:page => params[:page], :per_page => 10)
+   #@ render plain: params.inspect
+    #@anime = x.all
+    #@anime = Anime.all.order(:name).paginate(:page => params[:page], :per_page => 10)
   end
 
   def show
@@ -46,6 +56,6 @@ class AnimesController < ApplicationController
 
   private
   def anime_parms
-      params.require(:anime).permit(:name, :description, :location)
+      params.require(:anime).permit(:name, :description, :location, :ids)
   end
 end
