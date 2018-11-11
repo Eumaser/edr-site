@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
+=begin
 anime_list = [
   ["Test1","Lorem Ipsum Dolor","Kanon"],
   ["Data34","Lorem Ipsdum Dolor","Kanon"],
@@ -24,3 +24,18 @@ anime_list = [
 anime_list.each do |name, description, location|
   Anime.create(name: name, description: description, location: location)
 end
+
+=end
+
+require 'csv'
+
+csv_text = File.read(Rails.root.join('lib', 'seeds', 'example.csv'))
+csv = CSV.parse(csv_text.scrub, headers: true)
+
+csv.each do |row|
+  #t = Transaction.new
+  Anime.create(name: row['Name'], description: row['Description'], location: row['Location'])
+
+end
+
+puts "Saved"
