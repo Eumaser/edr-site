@@ -17,7 +17,7 @@ Functionality to add (long term)
 - Create new module location, for users to add their own HDD location etc.
 
 # Installation
-____________________________________________
+
 - Clone project into your directory https://github.com/Eumaser/edr-site.git
 - Access the app, run bundle install in your cmd.
 - If you have postgres installed, go to config/database.yml and changed the username and password  for development and test environment.
